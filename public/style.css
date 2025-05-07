@@ -1,0 +1,60 @@
+body {
+  background-image: url("/images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(85, 78, 78);
+  padding: 10px 20px;
+}
+
+.logo {
+  font-size: 24px;
+}
+
+nav > ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.search-container {
+  background: darkgray;
+  padding: 20px;
+  border-radius: 10px;
+}
+.search-container > input {
+  padding: 8px 50px;
+}
+
+.search-container > button {
+  padding: 8px 15px;
+  margin-left: 5px;
+  background-color: rgb(93, 142, 161);
+  color: white;
+  border-radius: 5px;
+}
+/*contact*/
+.contact-contact {
+  color: black;
+  padding-left: 10px;
+
+}

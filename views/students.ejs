@@ -1,0 +1,78 @@
+<%- include('partials/header') %>
+
+<h2>Students</h2>
+
+<form action="/students/add" method="POST" class="row g-3 mb-4">
+  <div class="col-md-2">
+    <input
+      type="text"
+      name="id"
+      class="form-control"
+      placeholder="Student ID"
+      required
+    />
+  </div>
+  <div class="col-md-3">
+    <input
+      type="text"
+      name="name"
+      class="form-control"
+      placeholder="Name"
+      required
+    />
+  </div>
+  <div class="col-md-2">
+    <input
+      type="text"
+      name="address"
+      class="form-control"
+      placeholder="Address"
+      required
+    />
+  </div>
+  <div class="col-md-2">
+    <input
+      type="number"
+      name="marks"
+      class="form-control"
+      placeholder="Marks"
+      required
+    />
+  </div>
+
+  <div class="col-md-3">
+    <button type="submit" class="btn btn-success w-100">Add Student</button>
+  </div>
+</form>
+
+<table class="table table-bordered">
+  <thead class="table-dark">
+    <tr>
+      <th>Sno</th>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Marks</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% students.forEach((student, index) => { %>
+    <tr>
+      <td><%= index + 1 %></td>
+      <td><%= student.id %></td>
+      <td><%= student.name %></td>
+      <td><%= student.address %></td>
+      <td><%=student.marks%></td>
+      <td>
+        <form action="/students/delete" method="POST">
+          <input type="hidden" name="id" value="<%= student.id %>" />
+          <button type="submit" class="btn btn-danger">Delete</button>
+        </form>
+      </td>
+    </tr>
+    <% }) %>
+  </tbody>
+</table>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,29 @@
+<%- include('partials/header') %>
+
+<h2>Performance</h2>
+<p class="mb-3">Students by marks:</p>
+
+<table class="table">
+  <thead class="table-dark">
+    <tr>
+      <th>Sno</th>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Marks</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% grades.forEach((student, index) => { %>
+    <tr>
+      <td><%= index + 1 %></td>
+      <td><%= student.id %></td>
+      <td><%= student.name %></td>
+      <td><%= student.address %></td>
+      <td><%= student.marks %></td>
+    </tr>
+    <% }) %>
+  </tbody>
+</table>
+
+<%- include('partials/footer') %>
