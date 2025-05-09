@@ -21,7 +21,7 @@ app.use("/classes", require("./routes/classes"));
 app.use("/students", require("./routes/students"));
 app.use("/performance", require("./routes/performance"));
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
 });

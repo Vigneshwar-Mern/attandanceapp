@@ -94,4 +94,11 @@ router.get("/Continue", (req, res) => {
   res.redirect("/index");
 });
 
+router.get("/logout", (req, res) => {
+  res.clearCookie("token");
+  console.log("User logged out");
+
+  res.redirect("/login");
+});
+
 module.exports = router;

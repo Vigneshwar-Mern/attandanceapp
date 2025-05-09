@@ -1,11 +1,22 @@
 <%- include('partials/header') %>
 
 <main class="main-content container py-5">
+  <div class="row justify-content-center mb-4">
+    <div class="col-md-8 text-center">
+      <h2 class="fw-bold mb-3">Welcome to the Attendance App!</h2>
+    </div>
+  </div>
+
   <div class="row justify-content-center">
     <div class="col-md-8">
-      <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search..." />
-        <button class="btn btn-primary">Search</button>
+      <div class="input-group shadow rounded">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Search for students, classes, or performance..."
+          aria-label="Search"
+        />
+        <button class="btn btn-primary" type="button">Search</button>
       </div>
     </div>
   </div>
